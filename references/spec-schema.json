@@ -1,0 +1,17 @@
+{
+  "name": "Harshavardhan Robba",
+  "phone": "+1-703-853-6964",
+  "email": "robbaharsha834@gmail.com",
+  "role": "AI Engineer | LLM Applications, RAG, Agent Systems",
+  "experience_first": false,
+  "links": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/harshavardhanrobba" },
+    { "label": "GitHub", "url": "https://github.com/HarshaVardhanRobba" },
+    { "label": "Portfolio", "url": "https://portfolio-harshavardhanrobba.vercel.app/" }
+  ],
+  "summary": "role-tailored summary, 1 to 3 lines, no pronouns",
+  "education": [ { "school": "", "loc": "", "degree": "", "date": "" } ],
+  "skills": [ { "label": "Languages", "items": "comma-separated skills actually in the resume" } ],
+  "projects": [ { "name": "Websito | Agentic Website-Generation SaaS", "meta": "tech stack", "link": "websito-eight.vercel.app  (or: Source on GitHub, or empty)", "url": "https://websito-eight.vercel.app/  (or the GitHub repo URL, or empty)", "bullets": ["XYZ bullet with **bold** keywords"] } ],
+  "experience": [ { "org": "", "loc": "", "title": "", "date": "", "bullets": ["XYZ bullet"] } ]
+}

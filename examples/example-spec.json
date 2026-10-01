@@ -1,0 +1,50 @@
+{
+  "name": "Harshavardhan Robba",
+  "phone": "+1-703-853-6964",
+  "email": "robbaharsha834@gmail.com",
+  "role": "AI Engineer | LLM Applications, RAG, Agent Systems",
+  "experience_first": false,
+  "links": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/harshavardhanrobba" },
+    { "label": "GitHub", "url": "https://github.com/HarshaVardhanRobba" },
+    { "label": "Portfolio", "url": "https://portfolio-harshavardhanrobba.vercel.app/" }
+  ],
+  "summary": "Full stack and agentic AI engineer working in TypeScript, Python, and C# over PostgreSQL.",
+  "education": [
+    { "school": "University of North Texas", "loc": "Denton, TX", "degree": "Master of Science in Computer Science (AI/ML and Data Science)", "date": "May 2026" },
+    { "school": "B V Raju Institute of Technology", "loc": "Hyderabad, India", "degree": "Bachelor of Technology in Computer Science", "date": "2024" }
+  ],
+  "skills": [
+    { "label": "Languages", "items": "TypeScript, JavaScript, Python, C#, SQL" },
+    { "label": "Agents and LLMs", "items": "LangGraph, LangChain, Inngest agent-kit, tool calling, structured outputs, MCP, RAG, guardrails, DeepEval, Azure OpenAI, Gemini 2.0, OpenAI Realtime, gpt-4o-mini" }
+  ],
+  "projects": [
+    {
+      "name": "Brand Guardian | Video Compliance Auditor",
+      "meta": "LangGraph, LangChain, Azure OpenAI, Azure AI Search, FastAPI",
+      "link": "Source on GitHub",
+      "url": "https://github.com/HarshaVardhanRobba/Brand_guardian",
+      "bullets": [
+        "Replaced a reviewer watching a full video to catch one spoken claim with a 2-node **LangGraph** pipeline that audits each video automatically.",
+        "Gave reviewers per-node visibility into tokens and latency by tracing every run through **LangSmith** and **OpenTelemetry**."
+      ]
+    },
+    {
+      "name": "TeamOmnifield | Restaurant Ordering Platform (2-Person Team)",
+      "meta": "ASP.NET Core MVC, .NET 10, PostgreSQL, Docker, Nginx",
+      "link": "",
+      "url": "",
+      "bullets": [
+        "Settled client and admin disputes over tickets with one ticket path, shipped across 3 pull requests."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "org": "JavaTpoint", "loc": "Remote", "title": "Technical Writer", "date": "Sep 2022 -- Feb 2023",
+      "bullets": [
+        "Ensured tutorial accuracy, as measured by every **Python** and **SQL** sample run before publication across 300+, by writing and testing runnable code."
+      ]
+    }
+  ]
+}

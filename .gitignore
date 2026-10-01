@@ -1,0 +1,7 @@
+work/
+*.aux
+*.log
+*.out
+*.pdf
+*.zip
+.env

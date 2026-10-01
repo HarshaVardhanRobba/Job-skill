@@ -1,0 +1,138 @@
+%!TEX program = xelatex
+% Compiles with XeLaTeX or pdfLaTeX (font: Helvetica via psnfss, standard in TeX Live)
+\documentclass[letterpaper,10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\definecolor{accent}{RGB}{128,0,32}
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+\raggedbottom\raggedright
+\setlength{\parindent}{0pt}\setlength{\tabcolsep}{0pt}
+\titleformat{\section}{\bfseries\normalsize\raggedright}{}{0em}{\MakeUppercase}[\vspace{-5pt}\rule{\textwidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{4pt}{1pt}
+\renewcommand{\arraystretch}{0.92}
+\newcommand{\bi}[1]{\item{\small #1}}
+\newcommand{\row}[4]{\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\textbf{#1} & \small #2 \\ \textit{\small #3} & \small #4 \\ \end{tabular*}\vspace{0pt}}
+\newcommand{\bstart}{\begin{itemize}[leftmargin=0.16in,itemsep=0.8pt,parsep=0pt,topsep=1pt,label=\textbullet]}
+\newcommand{\bend}{\end{itemize}\vspace{1pt}}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Harshavardhan Robba}\\[3pt]
+{\footnotesize +1-703-853-6964 $\bullet$
+\href{mailto:robbaharsha834@gmail.com}{robbaharsha834@gmail.com} $\bullet$
+\href{https://www.linkedin.com/in/harshavardhanrobba}{LinkedIn} $\bullet$
+\href{https://github.com/HarshaVardhanRobba}{GitHub} $\bullet$
+\href{https://portfolio-harshavardhanrobba.vercel.app/}{Portfolio}}\\[3pt]
+{\small\bfseries\color{accent} Software Engineer $|$ AI Agents, Full Stack, Backend}
+\end{center}
+\vspace{-8pt}
+
+\section{Summary}
+{\small Full stack and agentic AI engineer working in TypeScript, Python, and C\# over PostgreSQL.}
+
+\section{Education}
+\row{University of North Texas}{Denton, TX}{Master of Science in Computer Science (AI/ML and Data Science)}{May 2026}\\[2pt]
+\row{B V Raju Institute of Technology}{Hyderabad, India}{Bachelor of Technology in Computer Science}{2024}
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0em,label={},itemsep=1pt]
+  \item \textbf{Languages:} TypeScript, JavaScript, Python, C\#, SQL
+  \item \textbf{Agents and LLMs:} LangGraph, LangChain, Inngest agent-kit, tool calling, structured outputs, MCP, RAG, guardrails, DeepEval, Azure OpenAI, Gemini 2.0, OpenAI Realtime, gpt-4o-mini
+  \item \textbf{Retrieval, tracing, sandboxes:} Azure AI Search, LangSmith, OpenTelemetry, E2B sandboxes, Browserbase, Stagehand
+  \item \textbf{Interfaces:} React 19, Next.js 16, React Flow, Liveblocks, Tailwind CSS, shadcn/ui
+  \item \textbf{Services and APIs:} Node.js, ASP.NET Core MVC, .NET 10, FastAPI, Pydantic, tRPC, REST, Zod, Clerk, Polar billing, better-auth
+  \item \textbf{Data:} PostgreSQL, Drizzle ORM, Prisma, Neon serverless, MongoDB, Redis, ETL, ELT, PySpark, Databricks, Amazon RDS
+  \item \textbf{Reliability and voice:} Trigger.dev durable tasks, Inngest retries, HMAC webhook verification, asyncio, Twilio WebSockets, Deepgram STT, Stream Video SDK, WebRTC
+  \item \textbf{Infrastructure and shipping:} Docker, Nginx, Vercel, Render, AWS, Azure, GCP, CI, Vitest, Git, pull request review, branch workflow
+\end{itemize}
+
+\section{Projects}
+
+\row{Websito $|$ Agentic Website-Generation SaaS}{}{Inngest agent-kit, Gemini 2.0, E2B, Prisma, Clerk}{\href{https://websito-eight.vercel.app/}{\underline{websito-eight.vercel.app}}}
+\bstart
+\bi{Prevented runaway agent runs from draining user credits, as measured by a hard cap of 20 loops, by adding explicit state transitions and \textbf{structured outputs} to the multi-step \textbf{agent workflow}.}
+\bi{Eliminated broken previews, as measured by every generated site building in an \textbf{E2B} sandbox before the user sees it, by validating each tool-generated site pre-deploy.}
+\bi{Cut site delivery from four to eight weeks of manual development to 30 to 90 seconds by moving generation onto \textbf{Inngest} background jobs with \textbf{Gemini 2.0}.}
+\bi{Matched pricing to compute cost, as measured by 1 credit per generation against caps of 10 (free) and 100 (paid) a month, by building credit-based billing.}
+\bi{Held \textbf{tRPC} responses under 100 ms under load by pooling database connections with \textbf{Prisma Accelerate}.}
+\bend
+
+\row{Brand Guardian $|$ Video Compliance Auditor}{}{LangGraph, LangChain, Azure OpenAI, Azure AI Search, FastAPI}{\href{https://github.com/HarshaVardhanRobba/Brand_guardian}{\underline{Source on GitHub}}}
+\bstart
+\bi{Replaced a reviewer watching a full video to catch one spoken claim with a 2-node \textbf{LangGraph} pipeline that audits each video automatically.}
+\bi{Grounded every verdict in a retrieved policy rule, as measured by each finding tied to a passage from \textbf{Azure AI Search}, by indexing policy PDFs for \textbf{RAG}.}
+\bi{Kept reviewer reports from breaking on free text, as measured by valid JSON with severity and status on every audit, by enforcing \textbf{structured outputs} from \textbf{Azure OpenAI}.}
+\bi{Gave reviewers per-node visibility into tokens and latency by tracing every run through \textbf{LangSmith} and \textbf{OpenTelemetry}.}
+\bend
+
+\row{Pharmacy Voice Agent $|$ Phone Support Agent}{}{Twilio, Deepgram nova-3, OpenAI gpt-4o-mini, asyncio}{\href{https://github.com/HarshaVardhanRobba/Voice-Agent}{\underline{Source on GitHub}}}
+\bstart
+\bi{Cut response time from six seconds to 1.5 to 2.5 seconds per call by tuning audio frame size and barge-in handling.}
+\bi{Prevented wrong orders, as measured by every function call validated before a write, across 3 \textbf{tool calls} for drug lookup, order placement, and order status.}
+\bi{Kept callers on the line when a drug lookup fails by returning tool crashes as spoken responses instead of dropped calls.}
+\bi{Held live-call latency by moving audio in both directions through \textbf{asyncio} queues, with 160-byte frames mapping one to one with 20 ms of 8 kHz mulaw audio.}
+\bi{Made the slow step in any call visible, as measured by per-call latency and failure tracking, by instrumenting each stage of the call.}
+\bi{Kept lookups from adding delay, as measured by O(1) in-memory reads over 15 drugs and every order.}
+\bend
+
+\row{Web-base $|$ Browser Workflow Platform}{}{Next.js 16, React Flow, Trigger.dev, Browserbase, Clerk}{\href{https://web-base-workflow.vercel.app/}{\underline{web-base-workflow.vercel.app}}}
+\bstart
+\bi{Cut flow-building time from two hours of manual \textbf{Playwright} scripting to minutes by building a node-based \textbf{React Flow} canvas that ops teams use without a developer.}
+\bi{Kept runs alive through browser steps that wait minutes, and halted each run at the first failed step, by executing every node as a durable \textbf{Trigger.dev} task.}
+\bi{Gave users a live view of each run by integrating \textbf{Browserbase} with \textbf{Stagehand} and streaming the browser session back.}
+\bi{Prevented cross-tenant reads in a shared database, as measured by every query filtered on organization ID, by scoping all reads under \textbf{Clerk} tenancy.}
+\bi{Blocked malformed graphs before a paid run starts, as measured by 3 \textbf{Vitest} files covering graph and registry parity, by validating each workflow graph.}
+\bi{Replaced status polling with a token scoped to one run that streams updates through useRealtimeRun, cutting wasted requests.}
+\bi{Ended overwrites when two people edit one flow, as measured by a shared canvas, by syncing it through a \textbf{Liveblocks} room.}
+\bend
+
+\row{Elara $|$ Real-Time AI Meeting Agent}{}{Stream Video, OpenAI Realtime, Inngest, Drizzle ORM, Neon}{\href{https://elaravoiceai.onrender.com}{\underline{elaravoiceai.onrender.com}}}
+\bstart
+\bi{Replaced manual meeting minutes with a summary delivered within 12 seconds of hangup by processing calls with \textbf{OpenAI Realtime} and background jobs.}
+\bi{Stopped transcript loss at the request timeout, as measured by summaries completing in 5 to 12 seconds, by moving summarization to \textbf{Inngest} background jobs with retries.}
+\bi{Closed a gap where one org could see another's meetings, as measured by every row scoped to its owner, by redesigning the \textbf{PostgreSQL} schema with \textbf{Drizzle ORM}.}
+\bi{Blocked spoofed webhook writes by gating every write behind \textbf{HMAC} signature verification.}
+\bi{Resolved races among 6 webhook events by driving each event through a single explicit state change.}
+\bi{Enabled paid plans by integrating \textbf{Polar} billing through better-auth.}
+\bi{Answered post-call questions from the saved summary by adding a chat channel to each meeting.}
+\bi{Held one-way voice latency near 500 ms on the \textbf{OpenAI Realtime} path.}
+\bend
+
+\row{Bizpulse $|$ Inventory, Invoicing, and Payroll}{}{Next.js 16, PostgreSQL, Drizzle ORM, Zod}{\href{https://github.com/HarshaVardhanRobba/Bizpulse}{\underline{Source on GitHub}}}
+\bstart
+\bi{Replaced 3 disconnected shop tools with one data model, as measured by 7 tables across 3 domains shipped in 27 commits.}
+\bi{Eliminated oversold stock by committing each invoice and its stock deduction in a single \textbf{PostgreSQL} transaction, with an immutable StockLevel that refuses deductions below zero.}
+\bi{Kept past paystubs exact when tax rules change by versioning tax brackets so every paystub is pinned to the rule that priced it.}
+\bi{Made API failures consistent, as measured by 3 typed AppError subclasses mapping to one HTTP status each, by centralizing error handling.}
+\bend
+
+\row{TeamOmnifield $|$ Restaurant Ordering Platform (2-Person Team)}{}{ASP.NET Core MVC, .NET 10, PostgreSQL, Docker, Nginx}{}
+\bstart
+\bi{Gave a teammate a place to start, as measured by 3 working portals shipped as the base for the remaining work, by building them in \textbf{ASP.NET Core MVC} on \textbf{.NET 10}.}
+\bi{Replaced hand-taken phone orders with a storefront and an admin console, as measured by owners no longer taking orders by hand, on \textbf{PostgreSQL}.}
+\bi{Carried 85\% of lines across 6 of 18 merged \textbf{pull requests}, with every change reviewed before merge.}
+\bi{Settled client and admin disputes over tickets with one ticket path, shipped across 3 pull requests.}
+\bend
+
+\section{Experience}
+\row{Club InQuizitive}{Hyderabad, India}{Lead Full Stack Developer}{Jul 2023 -- Dec 2023}
+\bstart
+\bi{Delivered the club's main website and event platforms over a full semester, as measured by 1000+ users, by leading developers and setting each member's scope.}
+\bi{Replaced paper sign-up with live event registration, as measured by 500+, by pairing \textbf{Firebase} with \textbf{PostgreSQL}.}
+\bend
+\row{JavaTpoint}{Remote}{Technical Writer}{Sep 2022 -- Feb 2023}
+\bstart
+\bi{Ensured tutorial accuracy, as measured by every \textbf{Python} and \textbf{SQL} sample run before publication across 300+, by writing and testing runnable code.}
+\bend
+
+\end{document}
